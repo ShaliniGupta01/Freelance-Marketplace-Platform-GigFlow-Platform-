@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply bg-gradient-to-br from-indigo-50 via-white to-purple-50 text-gray-800;
+}
+
+/* Reusable UI */
+.input {
+  @apply w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-semibold transition;
+}
+
+.btn-primary {
+  @apply btn bg-indigo-600 text-white hover:bg-indigo-700;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-xl transition;
+}
