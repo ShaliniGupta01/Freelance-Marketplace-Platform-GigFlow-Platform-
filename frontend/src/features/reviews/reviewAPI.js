@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const createReview = async ({ gigId, rating, comment, clientId }) => {
   try {
-    const res = await axios.post("http://localhost:5000/api/reviews", {
+    const res = await axios.post("https://gigflowplatformbackend.onrender.com/api/reviews", {
       gigId,
       rating,
       comment,

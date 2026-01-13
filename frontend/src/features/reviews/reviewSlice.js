@@ -19,7 +19,7 @@ export const createReview = createAsyncThunk(
       };
 
       const res = await axios.post(
-        "http://localhost:5000/api/reviews",
+        "https://gigflowplatformbackend.onrender.com/api/reviews",
         { gigId, rating, comment }, // ✅ clientId removed
         config
       );
@@ -44,7 +44,7 @@ export const fetchReviewsByGig = createAsyncThunk(
   "reviews/fetchByGig",
   async (gigId, { rejectWithValue }) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/reviews/gig/${gigId}`);
+      const res = await axios.get(`https://gigflowplatformbackend.onrender.com/api/reviews/gig/${gigId}`);
       return res.data;
     } catch (err) {
       return rejectWithValue({ message: err.response?.data?.message || "Failed to fetch reviews" });

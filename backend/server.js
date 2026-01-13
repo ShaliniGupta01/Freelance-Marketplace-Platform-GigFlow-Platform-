@@ -21,7 +21,7 @@ const server = http.createServer(app);
 // ================= SOCKET.IO SETUP =================
 export const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // Vite frontend
+    origin: "https://freelance-marketplace-platform-gig.vercel.app", // Vite frontend
     credentials: true,
   },
 });
@@ -49,7 +49,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://freelance-marketplace-platform-gig.vercel.app",
     credentials: true,
   })
 );

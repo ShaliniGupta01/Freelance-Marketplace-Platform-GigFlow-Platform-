@@ -6,7 +6,7 @@ export const getUserById = createAsyncThunk(
   "users/getById",
   async (id, { rejectWithValue }) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/users/${id}`);
+      const res = await axios.get(`https://gigflowplatformbackend.onrender.com/api/users/${id}`);
       return res.data; // <-- full user object
     } catch (err) {
       return rejectWithValue(err.response?.data?.message || "Failed to fetch user");

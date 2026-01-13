@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API = "http://localhost:5000/api/bids";
+const API = "https://gigflowplatformbackend.onrender.com/api/bids";
 
 export const createBid = createAsyncThunk(
   "bids/create",
@@ -59,7 +59,7 @@ export const fetchBidsByGig = createAsyncThunk(
       const token = getState().auth.user.token;
 
       const res = await axios.get(
-        `http://localhost:5000/api/bids/${gigId}`,
+        `https://gigflowplatformbackend.onrender.com/api/bids/${gigId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -81,7 +81,7 @@ export const completeProject = createAsyncThunk(
       const token = getState().auth.user.token;
 
       const res = await axios.put(
-        `http://localhost:5000/api/bids/${bidId}/complete`,
+        `https://gigflowplatformbackend.onrender.com/api/bids/${bidId}/complete`,
         {},
         {
           headers: {
